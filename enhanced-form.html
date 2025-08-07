@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced HTML5 Content and Forms</title>
+</head>
+<body>
+    <header>
+        <h1>Advanced HTML5 Content and Form Validation</h1>
+        <nav>
+            <ul>
+                <li><a href="#content-section">Content Examples</a></li>
+                <li><a href="#form-section">Registration Form</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="content-section">
+            <h2>Content Organization Examples</h2>
+            <article>
+                <h3>Course Requirements</h3>
+                <h4>Prerequisites (Ordered List):</h4>
+                <ol>
+                    <li>Basic understanding of web technologies</li>
+                    <li>Familiarity with HTML structure</li>
+                    <li>Knowledge of CSS fundamentals</li>
+                </ol>
+
+                <h4>Available Resources (Unordered List):</h4>
+                <ul>
+                    <li>Online documentation and tutorials</li>
+                    <li>Practice exercises and projects</li>
+                    <li>Community forums and support</li>
+                    <li>Video lectures and demonstrations</li>
+                </ul>
+
+                <h4>Technical Specifications (Description List):</h4>
+                <dl>
+                    <dt>HTML5</dt>
+                    <dd>Latest standard for web markup language with semantic elements and form enhancements</dd>
+                    
+                    <dt>CSS3</dt>
+                    <dd>Advanced styling capabilities including flexbox, grid, and animations</dd>
+                    
+                    <dt>Responsive Design</dt>
+                    <dd>Design approach ensuring optimal viewing across various devices and screen sizes</dd>
+                </dl>
+            </article>
+
+            <article>
+                <h3>Course Schedule</h3>
+                <table>
+                    <caption>Weekly Learning Modules and Assignments</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Week</th>
+                            <th scope="col">Topic</th>
+                            <th scope="col">Assignment</th>
+                            <th scope="col">Due Date</th>
+                            <th scope="col">Points</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>HTML5 Semantic Elements</td>
+                            <td>Basic Page Structure</td>
+                            <td>2024-01-15</td>
+                            <td>25</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Advanced Content Elements</td>
+                            <td>Lists and Tables</td>
+                            <td>2024-01-22</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>HTML5 Forms</td>
+                            <td>Interactive Form Creation</td>
+                            <td>2024-01-29</td>
+                            <td>35</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Form Validation</td>
+                            <td>Advanced Form Features</td>
+                            <td>2024-02-05</td>
+                            <td>40</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4"><strong>Total Points:</strong></td>
+                            <td><strong>130</strong></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </article>
+
+            <article>
+                <h4>Audio Tutorial</h4>
+                <audio controls>
+                    <source src="html5-forms-tutorial.mp3" type="audio/mpeg">
+                    <source src="html5-forms-tutorial.ogg" type="audio/ogg">
+                    Your browser does not support the audio element. Please download the 
+                    <a href="html5-forms-tutorial.mp3">MP3 tutorial</a>.
+                </audio>
+
+                <h4>Video Demonstration</h4>
+                <video controls width="600" height="400">
+                    <source src="form-validation-demo.mp4" type="video/mp4">
+                    <source src="form-validation-demo.webm" type="video/webm">
+                    <track kind="subtitles" src="subtitles-en.vtt" srclang="en" label="English">
+                    Your browser does not support the video element. Please watch the demonstration on 
+                    <a href="https://example.com/video">our video platform</a>.
+                </video>
+            </article>
+        </section>
+
+        <section id="form-section">
+            <h2>Student Registration Form</h2>
+            <p>Please complete all required fields to register for the course.</p>
+
+            <form action="/submit-registration" method="post" novalidate>
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    
+                    <div>
+                        <label for="firstName">First Name *</label>
+                        <input type="text" 
+                               id="firstName" 
+                               name="firstName" 
+                               required 
+                               minlength="2" 
+                               maxlength="50"
+                               autocomplete="given-name"
+                               placeholder="Enter your first name">
+                    </div>
+
+                    <div>
+                        <label for="lastName">Last Name *</label>
+                        <input type="text" 
+                               id="lastName" 
+                               name="lastName" 
+                               required 
+                               minlength="2" 
+                               maxlength="50"
+                               autocomplete="family-name"
+                               placeholder="Enter your last name">
+                    </div>
+
+                    <div>
+                        <label for="email">Email Address *</label>
+                        <input type="email" 
+                               id="email" 
+                               name="email" 
+                               required 
+                               autocomplete="email"
+                               placeholder="student@example.com">
+                    </div>
+
+                    <div>
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" 
+                               id="phone" 
+                               name="phone" 
+                               pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                               autocomplete="tel"
+                               placeholder="123-456-7890"
+                               title="Format: 123-456-7890">
+                    </div>
+
+                    <div>
+                        <label for="birthdate">Date of Birth *</label>
+                        <input type="date" 
+                               id="birthdate" 
+                               name="birthdate" 
+                               required 
+                               min="1950-01-01" 
+                               max="2010-12-31"
+                               autocomplete="bday">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Account Setup</legend>
+                    
+                    <div>
+                        <label for="username">Username *</label>
+                        <input type="text" 
+                               id="username" 
+                               name="username" 
+                               required 
+                               minlength="4" 
+                               maxlength="20"
+                               pattern="[a-zA-Z0-9_]+"
+                               autocomplete="username"
+                               placeholder="Choose a unique username"
+                               title="Username must contain only letters, numbers, and underscores">
+                    </div>
+
+                    <div>
+                        <label for="password">Password *</label>
+                        <input type="password" 
+                               id="password" 
+                               name="password" 
+                               required 
+                               minlength="8" 
+                               maxlength="128"
+                               pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+"
+                               autocomplete="new-password"
+                               title="Password must contain at least 8 characters with uppercase, lowercase, number, and special character">
+                    </div>
+
+                    <div>
+                        <label for="confirmPassword">Confirm Password *</label>
+                        <input type="password" 
+                               id="confirmPassword" 
+                               name="confirmPassword" 
+                               required 
+                               minlength="8"
+                               autocomplete="new-password">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Course Selection</legend>
+                    
+                    <div>
+                        <label for="course">Primary Course *</label>
+                        <select id="course" name="course" required>
+                            <option value="">Choose a course...</option>
+                            <optgroup label="Frontend Development">
+                                <option value="html5-fundamentals">HTML5 Fundamentals</option>
+                                <option value="css3-advanced">Advanced CSS3</option>
+                                <option value="javascript-essentials">JavaScript Essentials</option>
+                            </optgroup>
+                            <optgroup label="Backend Development">
+                                <option value="nodejs-basics">Node.js Basics</option>
+                                <option value="database-design">Database Design</option>
+                                <option value="api-development">API Development</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="experience">Experience Level</label>
+                        <input type="range" 
+                               id="experience" 
+                               name="experience" 
+                               min="1" 
+                               max="10" 
+                               value="5"
+                               oninput="document.getElementById('experienceValue').textContent = this.value">
+                        <output id="experienceValue">5</output> (1=Beginner, 10=Expert)
+                    </div>
+
+                    <fieldset>
+                        <legend>Learning Goals (Check all that apply)</legend>
+                        <div>
+                            <input type="checkbox" id="goal1" name="goals" value="career-change">
+                            <label for="goal1">Career Change</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="goal2" name="goals" value="skill-enhancement">
+                            <label for="goal2">Skill Enhancement</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="goal3" name="goals" value="hobby">
+                            <label for="goal3">Personal Interest/Hobby</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="goal4" name="goals" value="business">
+                            <label for="goal4">Business Development</label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Preferred Learning Format *</legend>
+                        <div>
+                            <input type="radio" id="format1" name="format" value="online" required>
+                            <label for="format1">Online Only</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="format2" name="format" value="hybrid" required>
+                            <label for="format2">Hybrid (Online + In-person)</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="format3" name="format" value="in-person" required>
+                            <label for="format3">In-person Only</label>
+                        </div>
+                    </fieldset>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Additional Information</legend>
+                    
+                    <div>
+                        <label for="website">Personal Website/Portfolio</label>
+                        <input type="url" 
+                               id="website" 
+                               name="website" 
+                               autocomplete="url"
+                               placeholder="https://yourportfolio.com">
+                    </div>
+
+                    <div>
+                        <label for="linkedin">LinkedIn Profile</label>
+                        <input type="url" 
+                               id="linkedin" 
+                               name="linkedin" 
+                               pattern="https://.*linkedin\.com/.*"
+                               placeholder="https://linkedin.com/in/yourprofile"
+                               title="Please enter a valid LinkedIn URL">
+                    </div>
+
+                    <div>
+                        <label for="resume">Upload Resume</label>
+                        <input type="file" 
+                               id="resume" 
+                               name="resume" 
+                               accept=".pdf,.doc,.docx"
+                               title="Accepted formats: PDF, DOC, DOCX">
+                    </div>
+
+                    <div>
+                        <label for="startDate">Preferred Start Date</label>
+                        <input type="date" 
+                               id="startDate" 
+                               name="startDate" 
+                               min="2024-02-01">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Agreement and Submission</legend>
+                    
+                    <div>
+                        <input type="hidden" name="formVersion" value="2.1" readonly>
+                        <input type="hidden" name="timestamp" readonly>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">I agree to the Terms and Conditions *</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <label for="newsletter">Subscribe to our newsletter for updates and tips</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" id="dataProcessing" name="dataProcessing" required>
+                        <label for="dataProcessing">I consent to the processing of my personal data *</label>
+                    </div>
+                </fieldset>
+
+                <div>
+                    <button type="submit">Register for Course</button>
+                    <button type="reset">Clear Form</button>
+                    <input type="button" value="Save Draft" onclick="alert('Draft saved locally!')">
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
